@@ -1,0 +1,117 @@
+.header {
+    outline: 1px solid #ececec;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.main-nav__link {
+    margin-right: 93px;
+
+    font-family: $secondaryFontFamily;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: $logoDarkColor;
+}
+
+.main-nav__logo {
+    color: $acentColor;
+}
+
+.main-list {
+    display: flex;
+    align-items: center;
+}
+
+.main-list__item {
+    position: relative;
+
+    &:not(:last-child) {
+        margin-right: 50px;
+    }
+}
+
+.main-list__link {
+    display: block;
+    padding: 32px 0;
+
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    color: $titleTextColor;
+
+    @include primaryAnimation(color);
+    
+    &:hover,
+    &:focus {
+        color: $acentColor;
+    }
+
+    &--acent {
+        color: $acentColor;
+    }
+}   
+
+.secondary-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.secondary-nav__item {
+    &:nth-child(1) {
+        margin-right: 30px;
+    }
+}
+
+.secondary-nav__link {
+    display: flex;
+    align-items: center;
+
+    color: $secondaryTextColor;
+
+    @include primaryAnimation(color);
+
+    &:hover,
+    &:focus {
+        color: $acentColor;
+    }
+}
+
+.secondary-nav__logo {
+    margin-right: 10px;
+
+    fill: $secondaryTextColor;
+
+    @include primaryAnimation(color);
+
+    .secondary-nav__link:hover &,
+    .secondary-nav__link:focus & {
+        fill: $acentColor;
+    }
+}
+
+.main-list__link--acent {
+    &::after {
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        content: '';
+        
+        border: none;
+        min-width: 100%;
+        height: 4px;
+        background-color: $acentColor;
+        border-radius: 2px;
+    }
+}
+

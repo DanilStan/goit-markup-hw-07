@@ -1,4 +1,7 @@
 @import './utils/variables';
 @import './utils/placeholder';
 @import './utils/mixin';
-@import './components/header-page'
+@import './base/reset';
+@import './base/base';
+@import './components/header-page';
+@import './components/hero-page';
