@@ -1,0 +1,58 @@
+.ft-form {
+    margin-left: 93px;
+}
+
+.ft-form__text {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: $primaryLightColor;
+}
+
+.ft-form__box {
+    display: flex;
+}
+
+.ft-form__lable input {
+    width: 358px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+
+    color: $primaryLightColor;
+    background-color: #2f303a;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.ft-form__btn {
+    @extend %displayFlexCenter;
+
+    margin-left: 12px;
+    padding: 10px 28px;
+    min-width: 200px;
+
+    background-color: $acentColor;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 10px;
+
+        color: $primaryLightColor;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+    }
+
+}

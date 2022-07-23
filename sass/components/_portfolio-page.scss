@@ -1,0 +1,143 @@
+.category {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+
+.category__item {
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+
+.category__button {
+    padding: 6px 22px;
+
+    font-family: $primeryFontFamily;
+    color: $titleTextColor;
+    background-color: #f5f3fa;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover,
+    &:focus {
+        color: $primaryLightColor;
+        background-color: $acentColor;
+
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter__item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    @include primaryAnimation(box-shadow);
+
+    &:hover, 
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:nth-child(3n+3) {
+        margin-right: 0;
+    }
+
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9) {
+        margin-bottom: 0;
+    }
+}
+
+.filter__link {
+    text-decoration: none;
+}
+
+.filter__element {
+    position: relative;
+    overflow: hidden;
+}
+
+.filter__title {
+    margin-top: 0;
+    margin-bottom: 0;
+
+    color: $titleTextColor;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.filter__img {
+    display: block;
+}
+
+.filter__text {
+    margin-top: 4px;
+    margin-bottom: 0;
+
+    color: $secondaryTextColor;
+    font-size: 16px;
+    line-height: 1.88;
+}
+
+.filter__border {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+
+.filter__subtext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $primaryLightColor;
+
+    margin-top: 0;
+    margin-bottom: 0;
+
+    width: 322px;
+    font-size: 18px;
+    line-height: 1.56;
+}
+
+.filter__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    
+    @include primaryAnimation(transform);
+
+    .filter__item:hover &,
+    .filter__item:focus & {
+        transform: translateY(0%);
+    }
+}

@@ -86,7 +86,7 @@
     @include primaryAnimation(background-color);
 
     &:hover,
-    &::focus {
+    &:focus {
         background-color: $acentColor;
     }
 }
