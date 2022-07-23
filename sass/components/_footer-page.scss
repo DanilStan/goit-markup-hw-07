@@ -1,0 +1,94 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: $secondaryBackgroundColor;
+}
+
+.footer__flex {
+    display: flex;
+}
+
+.footer-contacts__link {
+    display: inline-block;
+    margin-bottom: 20px;
+
+    font-family: $secondaryFontFamily;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: $primaryLightColor;
+}
+
+.footer-contacts__logo {
+  color: $acentColor;
+}
+
+.address__item {
+    &:not(:last-child) {
+        margin-bottom: 9px;
+    }
+}
+
+.address__link {
+    display: block;
+
+    width: 231px;
+    color: $secondaryLightColor;
+    font-size: 14px;
+    line-height: 1.71;
+    text-decoration: none;
+    font-style: normal;
+
+    @include primaryAnimation(color);
+
+    &:hover,
+    &:focus {
+        color: $acentColor;
+    }
+}
+
+.address__link--white {
+    color: $primaryLightColor;
+}
+
+.social {
+    margin-left: 70px;
+}
+
+.social__title {
+    margin-bottom: 20px;
+
+    color: $primaryLightColor;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.social__list {
+    display: flex;
+}
+
+.social__item {
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.social__link {
+    @extend %displayFlexCenter;
+
+    height: 44px;
+    width: 44px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    @include primaryAnimation(background-color);
+
+    &:hover,
+    &::focus {
+        background-color: $acentColor;
+    }
+}
+
+

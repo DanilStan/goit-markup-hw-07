@@ -41,7 +41,7 @@
     @include primaryAnimation(fill);
 
     .clients__link:hover &,
-    .clients__link::focus & {
+    .clients__link:focus & {
         fill: $acentColor;
     }
 }
