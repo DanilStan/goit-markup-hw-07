@@ -367,10 +367,6 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-.team__items + .team__items {
-  margin-left: 10px;
-}
-
 .team__item:not(:last-child) {
   margin-right: 30px;
 }
